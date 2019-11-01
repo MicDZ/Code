@@ -14,6 +14,6 @@
 * YLOJ
 
 ## API
-[https://code.micdz.cn/OJ名称/题号-题目名](https://code.micdz.cn/)
+[https://cdn.micdz.cn/OJ名称/题号-题目名](https://cdn.micdz.cn/)
 
 具体参考[https://github.com/MicDZ/Code](https://github.com/MicDZ/Code)的目录
