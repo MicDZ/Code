@@ -5,7 +5,7 @@
 #include<algorithm>
 
 using namespace std;
-
+#define int ll
 #define REP(i,e,s) for(register int i=e; i<=s; i++)
 #define DREP(i,e,s) for(register int i=e; i>=s; i--)
 #define ll long long
@@ -25,15 +25,45 @@ int gcd(int a,int b) {return b?gcd(b,a%b):a;}
 
 struct edge {
 	int l,r;
-} a[MAXN];
+} a[MAXN],b[MAXN];
 
-int main() {
-	int n=read(),A=read(),B=read();
+bool cmp(edge a,edge b) {
+	return a.l<b.l;
+}
+
+signed main() {
+	int n=read(),A=read(),B=read(),cnt=n;
 	REP(i,1,n) a[i].l=read(),a[i].r=read();
 	int k=A/gcd(A,B+1)*B;
-	REP(i,1,n) {
-	
+	REP(i,1,cnt) {
+		if(a[i].r-a[i].l+1>=k) {
+			printf("%lld\n",k);
+			return 0;
+		}	
+		else {
+			a[i].l%=k;
+			a[i].r%=k;
+			if(a[i].l>a[i].r) {
+				a[++n].l=0,a[n].r=a[i].r;
+				a[i].r=k-1;;
+			}
+		}
 	}
-	printf("%d\n",k);
+	DE("%lld\n",k);
+	REP(i,1,n) DE("%d %d\n",a[i].l,a[i].r);
+
+	sort(a+1,a+1+n,cmp);
+	int lf=a[1].l,rg=a[1].r,ans=0;
+	a[++n].l=k+1,a[n].r=0;
+	REP(i,2,n) {
+		if(rg<a[i].l) {
+			ans+=rg-lf+1;
+			lf=a[i].l;
+			rg=a[i].r;
+		}
+		else rg=max(rg,a[i].r);
+	}
+
+	printf("%lld\n",ans);
 	return 0;
 }
