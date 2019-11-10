@@ -20,7 +20,7 @@ int read() {
 }
 
 const int MAXN=100+10,MOD=1e9+7;
-int n;
+int n=2;
 struct matrix {
 	int a[MAXN][MAXN];
 	matrix() {memset(a,0,sizeof(a));}
@@ -43,13 +43,27 @@ matrix qpow(matrix a,int b) {
 	return ans;
 }
 
-signed main() {
-	n=read();int k=read();
-	matrix a,b;
-	REP(i,1,n) REP(j,1,n) a.a[i][j]=read();
-	b=qpow(a,k);
-	REP(i,1,n) {
-		REP(j,1,n) printf("%lld ",b.a[i][j]);puts("");
+int int_qpow(int a,int b) {
+	int ans=1;
+	while(b) {
+		if(b&1) ans=ans*a%MOD;
+		a=a*a%MOD;
+		b>>=1;
 	}
+	return ans;
+}
+
+signed main() {
+	int n=read();
+	int x=read(),a=read(),b=read();	
+	matrix s,ans;
+	s.a[1][1]=(a*int_qpow(x,MOD-2)+1)%MOD;
+	s.a[1][2]=1;
+	s.a[2][1]=(b*int_qpow(x,MOD-2))%MOD;
+	s.a[2][2]=0;
+	ans=qpow(s,n-1);
+
+	printf("%lld\n",ans.a[1][1]);
 	return 0;
 }
+

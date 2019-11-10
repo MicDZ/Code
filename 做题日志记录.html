@@ -1,0 +1,1451 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+        
+        <style>
+.task-list-item { list-style-type: none; } .task-list-item-checkbox { margin-left: -20px; vertical-align: middle; }
+</style>
+        <style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        
+        
+    </head>
+    <body class="vscode-light">
+        <table>
+<thead>
+<tr>
+<th style="text-align:center">序号</th>
+<th style="text-align:center">日期</th>
+<th style="text-align:center">题目及来源</th>
+<th style="text-align:center">做题时间</th>
+<th style="text-align:center">提交次数</th>
+<th style="text-align:center">解题说明</th>
+<th style="text-align:center">TAG</th>
+<th style="text-align:center">参考的解题报告地址</th>
+<th style="text-align:center">提交地址</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">序号</td>
+<td style="text-align:center">日期</td>
+<td style="text-align:center">题目及来源</td>
+<td style="text-align:center">做题时间</td>
+<td style="text-align:center">提交次数</td>
+<td style="text-align:center">解题说明</td>
+<td style="text-align:center">TAG</td>
+<td style="text-align:center">参考的解题报告地址</td>
+<td style="text-align:center">提交地址</td>
+</tr>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">2019.07.31</td>
+<td style="text-align:center">[USACO]香甜的黄油</td>
+<td style="text-align:center">15min</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">跑n遍SPFA再统计答案</td>
+<td style="text-align:center">最短路</td>
+<td style="text-align:center">N/A</td>
+<td style="text-align:center">LG1828</td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center">2019.07.31</td>
+<td style="text-align:center">[USACO]热浪</td>
+<td style="text-align:center">10min</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">SPFA/DIJ板子题</td>
+<td style="text-align:center">最短路</td>
+<td style="text-align:center">N/A</td>
+<td style="text-align:center">LG1339</td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center">2019.07.31</td>
+<td style="text-align:center">服务店设置</td>
+<td style="text-align:center">30min</td>
+<td style="text-align:center">3，有几个点的数据有问题</td>
+<td style="text-align:center">跑n遍SPFA再统计答案</td>
+<td style="text-align:center">最短路</td>
+<td style="text-align:center">N/A</td>
+<td style="text-align:center">CJ1041</td>
+</tr>
+<tr>
+<td style="text-align:center">4</td>
+<td style="text-align:center">2019.07.31</td>
+<td style="text-align:center">stars</td>
+<td style="text-align:center">30min</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">从y小的向上扫，用树状数组维护每一个位置当前行左下的星星数量</td>
+<td style="text-align:center">树状数组</td>
+<td style="text-align:center">N/A</td>
+<td style="text-align:center">POJ2352</td>
+</tr>
+<tr>
+<td style="text-align:center">5</td>
+<td style="text-align:center">2019.07.31</td>
+<td style="text-align:center">求数列逆序对</td>
+<td style="text-align:center">0min</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">此前用树状数组求解过此题，先离散化数组，利用桶排的思想从左到右扫</td>
+<td style="text-align:center">树状数组</td>
+<td style="text-align:center">N/A</td>
+<td style="text-align:center">CJ1346</td>
+</tr>
+<tr>
+<td style="text-align:center">6</td>
+<td style="text-align:center">2019.07.31</td>
+<td style="text-align:center">线段树-zwei</td>
+<td style="text-align:center">35min</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">由于异或具有传递性，并且异或的逆运算也是异或本身，所以可以用树状数组维护，每次更新要减（异或）去原先的值</td>
+<td style="text-align:center">树状数组，数学</td>
+<td style="text-align:center">N/A</td>
+<td style="text-align:center">CJ2160</td>
+</tr>
+<tr>
+<td style="text-align:center">7</td>
+<td style="text-align:center">2019.07.31</td>
+<td style="text-align:center">线段树-magictree</td>
+<td style="text-align:center">50min</td>
+<td style="text-align:center">2，第一次有几个地方没注意要开long long</td>
+<td style="text-align:center">区间修改查询的树状数组，通过维护两个树状数组实现</td>
+<td style="text-align:center">树状数组</td>
+<td style="text-align:center">算法竞赛进阶指南P200</td>
+<td style="text-align:center">CJ2162</td>
+</tr>
+<tr>
+<td style="text-align:center">8</td>
+<td style="text-align:center">2019.07.31</td>
+<td style="text-align:center">Ultra-QuickSort</td>
+<td style="text-align:center">30min</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">英文题中冒泡排序的交换次数就是逆序对数量，重定义了一个变量耽误了时间</td>
+<td style="text-align:center">树状数组</td>
+<td style="text-align:center">N/A</td>
+<td style="text-align:center">POJ2299</td>
+</tr>
+<tr>
+<td style="text-align:center">9</td>
+<td style="text-align:center">2019.08.01</td>
+<td style="text-align:center">Mobile phones</td>
+<td style="text-align:center">50min</td>
+<td style="text-align:center">4，英文题目中有要求如果修改后为负则不加，而中文题面没有，看题解才知道</td>
+<td style="text-align:center">二维树状数组板子题，注意当手机数减至负时就不要减了直接变为0</td>
+<td style="text-align:center">树状数组</td>
+<td style="text-align:center">链接</td>
+<td style="text-align:center">POJ1195</td>
+</tr>
+<tr>
+<td style="text-align:center">10</td>
+<td style="text-align:center">2019.08.01</td>
+<td style="text-align:center">Matrix</td>
+<td style="text-align:center">40min</td>
+<td style="text-align:center">2，第一次PE，多组数据的每组数据间要有换行</td>
+<td style="text-align:center">二维树状数组，思路类似于差分，每次将待修改的矩形的四个角修改，查询时找到(x,y)右上角的前缀和。</td>
+<td style="text-align:center">树状数组</td>
+<td style="text-align:center">N/A</td>
+<td style="text-align:center">POJ2155</td>
+</tr>
+<tr>
+<td style="text-align:center">11</td>
+<td style="text-align:center">2019.08.01</td>
+<td style="text-align:center">Apple Tree</td>
+<td style="text-align:center">80min</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">对一棵树进行dfs，找到首次到达和离开的时间戳，其进入时间到离开时间的区间即为其所有子树，再用树状数组维护这一进入及离开时间</td>
+<td style="text-align:center">树状数组，图论</td>
+<td style="text-align:center">链接</td>
+<td style="text-align:center">POJ3321</td>
+</tr>
+<tr>
+<td style="text-align:center">12</td>
+<td style="text-align:center">2019.08.01</td>
+<td style="text-align:center">数列操作</td>
+<td style="text-align:center">5min</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">单点修改区间查询裸题</td>
+<td style="text-align:center">树状数组</td>
+<td style="text-align:center">N/A</td>
+<td style="text-align:center">CJ1980</td>
+</tr>
+<tr>
+<td style="text-align:center">13</td>
+<td style="text-align:center">2019.08.01</td>
+<td style="text-align:center">[HNOI2003]激光炸弹</td>
+<td style="text-align:center">35min</td>
+<td style="text-align:center">3，前两次MLE</td>
+<td style="text-align:center">5000^2暴力二维前缀和</td>
+<td style="text-align:center">二维前缀和</td>
+<td style="text-align:center">N/A</td>
+<td style="text-align:center">LG2280</td>
+</tr>
+<tr>
+<td style="text-align:center">14</td>
+<td style="text-align:center">2019.08.01</td>
+<td style="text-align:center">[JSOI2010]部落划分</td>
+<td style="text-align:center">20min</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">用kruskal连边，当连到还剩k条边时直接输出</td>
+<td style="text-align:center">最小生成树</td>
+<td style="text-align:center">N/A</td>
+<td style="text-align:center">LG4047</td>
+</tr>
+<tr>
+<td style="text-align:center">15</td>
+<td style="text-align:center">2019.08.01</td>
+<td style="text-align:center">[NOIP2014]寻找道路</td>
+<td style="text-align:center">30min</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">首先反向建边从终点开始跑一遍bfs，再将可以连边的重新建图，再跑一遍dij</td>
+<td style="text-align:center">最短路</td>
+<td style="text-align:center">N/A</td>
+<td style="text-align:center">LG2296</td>
+</tr>
+<tr>
+<td style="text-align:center">16</td>
+<td style="text-align:center">2019.08.01</td>
+<td style="text-align:center">[HNOI2006]鬼谷子的钱袋</td>
+<td style="text-align:center">15min</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">第一个答案为log(m)，第二个答案递推</td>
+<td style="text-align:center">数学</td>
+<td style="text-align:center">N/A</td>
+<td style="text-align:center">LG2320</td>
+</tr>
+<tr>
+<td style="text-align:center">17</td>
+<td style="text-align:center">2019.08.02</td>
+<td style="text-align:center">[ZJOI2008]泡泡堂</td>
+<td style="text-align:center">50min</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">模拟两队的决策，如果己方最强强于对方最强则使用，如果己方最弱强于对方最弱则使用，另外再判断己方最弱是否能与对方最强打平。</td>
+<td style="text-align:center">贪心，模拟</td>
+<td style="text-align:center">链接</td>
+<td style="text-align:center">LG2587</td>
+</tr>
+<tr>
+<td style="text-align:center">18</td>
+<td style="text-align:center">2019.08.02</td>
+<td style="text-align:center">[USACO]Cube Stacking</td>
+<td style="text-align:center">60min</td>
+<td style="text-align:center">2，第一次在路径压缩时忽略了方向</td>
+<td style="text-align:center">带权并查集，且在合并时需要同时记录在此之下和上的，需要对并查集有深刻理解</td>
+<td style="text-align:center">并查集</td>
+<td style="text-align:center">链接</td>
+<td style="text-align:center">LG5092</td>
+</tr>
+<tr>
+<td style="text-align:center">19</td>
+<td style="text-align:center">2019.08.02</td>
+<td style="text-align:center">[NOIP2011]聪明的质检员</td>
+<td style="text-align:center">30min</td>
+<td style="text-align:center">2，第一次前缀和写错</td>
+<td style="text-align:center">二分裸题，前缀和维护区间</td>
+<td style="text-align:center">二分答案，前缀和</td>
+<td style="text-align:center">N/A</td>
+<td style="text-align:center">LG1314</td>
+</tr>
+<tr>
+<td style="text-align:center">20</td>
+<td style="text-align:center">2019.08.02</td>
+<td style="text-align:center">[USACO]MooFest</td>
+<td style="text-align:center">50min</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">用两个树状数组维护左右两边的满足要求的奶牛坐标前缀及数量，再简单相加减</td>
+<td style="text-align:center">前缀和</td>
+<td style="text-align:center">链接</td>
+<td style="text-align:center">LG5094</td>
+</tr>
+<tr>
+<td style="text-align:center">21</td>
+<td style="text-align:center">2019.08.02</td>
+<td style="text-align:center">[NOIP2012]同余方程</td>
+<td style="text-align:center">30min</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">简单数学</td>
+<td style="text-align:center">数学</td>
+<td style="text-align:center">N/A</td>
+<td style="text-align:center">LG1082</td>
+</tr>
+<tr>
+<td style="text-align:center">22</td>
+<td style="text-align:center">2019.08.02</td>
+<td style="text-align:center">青蛙的的约会</td>
+<td style="text-align:center">40min</td>
+<td style="text-align:center">3，前两次变量重名而无法出正确答案</td>
+<td style="text-align:center">简单数学，简单更改拓展欧几里得</td>
+<td style="text-align:center">数学</td>
+<td style="text-align:center">N/A</td>
+<td style="text-align:center">LG1516</td>
+</tr>
+<tr>
+<td style="text-align:center">23</td>
+<td style="text-align:center">2019.08.05</td>
+<td style="text-align:center">线性筛素数</td>
+<td style="text-align:center">10min</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">N/A</td>
+<td style="text-align:center">数学</td>
+<td style="text-align:center">N/A</td>
+<td style="text-align:center">LG3383</td>
+</tr>
+<tr>
+<td style="text-align:center">24</td>
+<td style="text-align:center">2019.08.05</td>
+<td style="text-align:center">线段树1</td>
+<td style="text-align:center">50min</td>
+<td style="text-align:center">2，第一次忘开4倍</td>
+<td style="text-align:center">N/A</td>
+<td style="text-align:center">线段树</td>
+<td style="text-align:center">N/A</td>
+<td style="text-align:center">LG3372</td>
+</tr>
+<tr>
+<td style="text-align:center">25</td>
+<td style="text-align:center">2019.08.06</td>
+<td style="text-align:center">Conscription</td>
+<td style="text-align:center">30min</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">第一眼看到题目以为是二分图，后来发现男女之间没有必然二分关系，那么可以跑最大生成树，每次加入的新边就是可以减去的最大值</td>
+<td style="text-align:center">最小生成树，图论</td>
+<td style="text-align:center">N/A</td>
+<td style="text-align:center">POJ3169</td>
+</tr>
+<tr>
+<td style="text-align:center">26</td>
+<td style="text-align:center">2019.08.07</td>
+<td style="text-align:center">【模板】缩点</td>
+<td style="text-align:center">30min</td>
+<td style="text-align:center">2，第一次数组开小</td>
+<td style="text-align:center">首先用tarjan强连通分量缩点，然后记忆化搜索DAG或DP</td>
+<td style="text-align:center">强连通分量</td>
+<td style="text-align:center">N/A</td>
+<td style="text-align:center">LG3387</td>
+</tr>
+<tr>
+<td style="text-align:center">27</td>
+<td style="text-align:center">2019.08.07</td>
+<td style="text-align:center">信息传递</td>
+<td style="text-align:center">25min</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">用tarjan找到分量个数大于1的最小值</td>
+<td style="text-align:center">强连通分量</td>
+<td style="text-align:center">N/A</td>
+<td style="text-align:center">LG2661</td>
+</tr>
+<tr>
+<td style="text-align:center">28</td>
+<td style="text-align:center">2019.08.07</td>
+<td style="text-align:center">受欢迎的牛</td>
+<td style="text-align:center">50min</td>
+<td style="text-align:center">4，前两次细节错误</td>
+<td style="text-align:center">找到入度为0的点，若有多于两个则没有明星奶牛</td>
+<td style="text-align:center">强连通分量</td>
+<td style="text-align:center">N/A</td>
+<td style="text-align:center">LG2341</td>
+</tr>
+<tr>
+<td style="text-align:center">29</td>
+<td style="text-align:center">2019.08.07</td>
+<td style="text-align:center">车站分级</td>
+<td style="text-align:center">40min</td>
+<td style="text-align:center">2，第一次数组开小</td>
+<td style="text-align:center">构图后topsort找到有多少层</td>
+<td style="text-align:center">拓扑排序，图论</td>
+<td style="text-align:center">N/A</td>
+<td style="text-align:center">LG1983</td>
+</tr>
+<tr>
+<td style="text-align:center">30</td>
+<td style="text-align:center">2019.08.07</td>
+<td style="text-align:center">篮球队员的通讯问题</td>
+<td style="text-align:center">30min</td>
+<td style="text-align:center">6，前5次都因数组开大而RE</td>
+<td style="text-align:center">找到强连通分量的所有成员，但是要按顺序输出</td>
+<td style="text-align:center">强连通分量</td>
+<td style="text-align:center">N/A</td>
+<td style="text-align:center">CJ2275</td>
+</tr>
+<tr>
+<td style="text-align:center">31</td>
+<td style="text-align:center">2019.08.07</td>
+<td style="text-align:center">[WZOI2011 S3模拟赛] 消息传递</td>
+<td style="text-align:center">15min</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">如果当前点所在的强连通分量存在两个以上的成员则可以收到</td>
+<td style="text-align:center">强连通分量</td>
+<td style="text-align:center">N/A</td>
+<td style="text-align:center">CJ1419</td>
+</tr>
+<tr>
+<td style="text-align:center">32</td>
+<td style="text-align:center">2019.08.07</td>
+<td style="text-align:center">城市的备用交换机</td>
+<td style="text-align:center">50min</td>
+<td style="text-align:center">2，第一次数组开小</td>
+<td style="text-align:center">割点城市失去交换机会导致其他城市通讯中断，找到割点</td>
+<td style="text-align:center">割点</td>
+<td style="text-align:center">N/A</td>
+<td style="text-align:center">CJ2274</td>
+</tr>
+<tr>
+<td style="text-align:center">33</td>
+<td style="text-align:center">2019.08.11</td>
+<td style="text-align:center">[国家集训队]稳定婚姻</td>
+<td style="text-align:center">30min</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">tarjan强连通分量裸题</td>
+<td style="text-align:center">强连通分量</td>
+<td style="text-align:center">N/A</td>
+<td style="text-align:center">LG1407</td>
+</tr>
+<tr>
+<td style="text-align:center">34</td>
+<td style="text-align:center">2019.08.26</td>
+<td style="text-align:center">紧急集合 / 聚会</td>
+<td style="text-align:center">50min</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">找到三个点两两之间的lca，其中最深的一个则为ans1，然后再统计答案</td>
+<td style="text-align:center">最近公共祖先</td>
+<td style="text-align:center">N/A</td>
+<td style="text-align:center">LG4281</td>
+</tr>
+<tr>
+<td style="text-align:center">35</td>
+<td style="text-align:center">2019.08.26</td>
+<td style="text-align:center">最长距离</td>
+<td style="text-align:center">50min</td>
+<td style="text-align:center">3，前两次数组开小</td>
+<td style="text-align:center">从每一个点出发，找到至多经过k个1能够到达的地方统计答案</td>
+<td style="text-align:center">最短路</td>
+<td style="text-align:center">交流</td>
+<td style="text-align:center">LG4162</td>
+</tr>
+<tr>
+<td style="text-align:center">36</td>
+<td style="text-align:center">2019.08.26</td>
+<td style="text-align:center">[国家集训队]书堆</td>
+<td style="text-align:center">60min</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">使用欧拉系数，但较小数据(1e7(8))需要暴力算出</td>
+<td style="text-align:center">数学，物理</td>
+<td style="text-align:center">交流</td>
+<td style="text-align:center">LG4820</td>
+</tr>
+<tr>
+<td style="text-align:center">37</td>
+<td style="text-align:center">2019.08.26</td>
+<td style="text-align:center">[SDOI2010]地精部落</td>
+<td style="text-align:center">60min</td>
+<td style="text-align:center">4，前三次忘取模</td>
+<td style="text-align:center">dp递推</td>
+<td style="text-align:center">动态规划</td>
+<td style="text-align:center">交流</td>
+<td style="text-align:center">LG2467</td>
+</tr>
+<tr>
+<td style="text-align:center">38</td>
+<td style="text-align:center">2019.08.27</td>
+<td style="text-align:center">[IOI2015]boxes纪念品盒</td>
+<td style="text-align:center">60min</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">找到最前面和最后面单独出来的枚举</td>
+<td style="text-align:center">贪心</td>
+<td style="text-align:center">交流</td>
+<td style="text-align:center">BZOJ4368</td>
+</tr>
+<tr>
+<td style="text-align:center">39</td>
+<td style="text-align:center">2019.08.27</td>
+<td style="text-align:center">[JSOI2008]最大数</td>
+<td style="text-align:center">30min</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">线段树维护题目给出的内容</td>
+<td style="text-align:center">线段树</td>
+<td style="text-align:center">N/A</td>
+<td style="text-align:center">LG1198</td>
+</tr>
+<tr>
+<td style="text-align:center">40</td>
+<td style="text-align:center">2019.08.28</td>
+<td style="text-align:center">UVA10587 Mayor's posters</td>
+<td style="text-align:center">50min</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">线段树维护覆盖</td>
+<td style="text-align:center">线段树</td>
+<td style="text-align:center">N/A</td>
+<td style="text-align:center">UVA10587</td>
+</tr>
+<tr>
+<td style="text-align:center">41</td>
+<td style="text-align:center">2019.08.28</td>
+<td style="text-align:center">[SCOI2005]扫雷</td>
+<td style="text-align:center">90min</td>
+<td style="text-align:center">2，第一次思路错误骗分</td>
+<td style="text-align:center">枚举第一个点的情况，后面的依次递推</td>
+<td style="text-align:center">模拟</td>
+<td style="text-align:center">交流</td>
+<td style="text-align:center">LG2327</td>
+</tr>
+<tr>
+<td style="text-align:center">42</td>
+<td style="text-align:center">2019.08.28</td>
+<td style="text-align:center">楼房重建</td>
+<td style="text-align:center">50min</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">线段树维护，注意合并的时候分类讨论</td>
+<td style="text-align:center">线段树</td>
+<td style="text-align:center">交流</td>
+<td style="text-align:center">LG4198</td>
+</tr>
+<tr>
+<td style="text-align:center">43</td>
+<td style="text-align:center">2019.08.28</td>
+<td style="text-align:center">[HNOI2006]公路修建问题</td>
+<td style="text-align:center">30min</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">直接在一级公路中找出k条边，再在二级公路中找到剩下的(n-1-k)条边</td>
+<td style="text-align:center">最小生成树</td>
+<td style="text-align:center">N/A</td>
+<td style="text-align:center">LG2323</td>
+</tr>
+<tr>
+<td style="text-align:center">44</td>
+<td style="text-align:center">2019.08.29</td>
+<td style="text-align:center">[USACO5.5]矩形周长Picture</td>
+<td style="text-align:center">150min</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">线段树扫描线维护，对于每找到一条边，当前的长度总和（有覆盖线段的长度）减去更新后的长度总和即为周长产生的贡献。横向跑一遍，纵向跑一遍。</td>
+<td style="text-align:center">线段树，扫描线</td>
+<td style="text-align:center">N/A</td>
+<td style="text-align:center">LG1856</td>
+</tr>
+<tr>
+<td style="text-align:center">45</td>
+<td style="text-align:center">2019.08.29</td>
+<td style="text-align:center">[JLOI2014]松鼠的新家</td>
+<td style="text-align:center">50min</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">树上差分裸题，要注意的是由于到达一个点与从这个点出发并不需要两个糖果，所以要把所有既为出发点又为到达点的点减1</td>
+<td style="text-align:center">图论，树上查分</td>
+<td style="text-align:center">N/A</td>
+<td style="text-align:center">LG3258</td>
+</tr>
+<tr>
+<td style="text-align:center">46</td>
+<td style="text-align:center">2019.08.29</td>
+<td style="text-align:center">[AHOI2009]维护序列</td>
+<td style="text-align:center">50min</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">线段树模板题，注意乘与加的优先级与取模</td>
+<td style="text-align:center">线段树</td>
+<td style="text-align:center">N/A</td>
+<td style="text-align:center">LG2023</td>
+</tr>
+<tr>
+<td style="text-align:center">47</td>
+<td style="text-align:center">2019.08.29</td>
+<td style="text-align:center">[SHOI2012]魔法树</td>
+<td style="text-align:center">120min(学习树剖80min)</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">树链剖分裸题</td>
+<td style="text-align:center">树链剖分，线段树</td>
+<td style="text-align:center">8.29 source.txt</td>
+<td style="text-align:center">LG3833</td>
+</tr>
+<tr>
+<td style="text-align:center">48</td>
+<td style="text-align:center">2019.08.29</td>
+<td style="text-align:center">[NOI2015]软件包管理器</td>
+<td style="text-align:center">60min</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">NOIP2012</td>
+<td style="text-align:center">线段树，树链剖分</td>
+<td style="text-align:center">N/A</td>
+<td style="text-align:center">LG2146</td>
+</tr>
+<tr>
+<td style="text-align:center">49</td>
+<td style="text-align:center">2019.08.30</td>
+<td style="text-align:center">[JLOI2011]飞行路线</td>
+<td style="text-align:center">70min</td>
+<td style="text-align:center">3，第一次看错题意，第二次数组开小</td>
+<td style="text-align:center">分层最短路没有学过，但想到了需要记录下到达每一个点使用i次优惠的最小花费，这样在找使用i+1次优惠时就可以直接调用。然后在原最短路的模板中建立一个与使用i次的点的三角形不等式</td>
+<td style="text-align:center">图论，最短路</td>
+<td style="text-align:center">N/A</td>
+<td style="text-align:center">LG4568</td>
+</tr>
+<tr>
+<td style="text-align:center">50</td>
+<td style="text-align:center">2019.08.30</td>
+<td style="text-align:center">[USACO09FEB]改造路Revamping Trails</td>
+<td style="text-align:center">10min</td>
+<td style="text-align:center">2，第一次数组开小</td>
+<td style="text-align:center">分层图最短路模板</td>
+<td style="text-align:center">图论，最短路</td>
+<td style="text-align:center">N/A</td>
+<td style="text-align:center">LG2939</td>
+</tr>
+<tr>
+<td style="text-align:center">51</td>
+<td style="text-align:center">2019.08.30</td>
+<td style="text-align:center">[BJWC2012]冻结</td>
+<td style="text-align:center">10min</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">分层图最短路模板</td>
+<td style="text-align:center">图论，最短路</td>
+<td style="text-align:center">N/A</td>
+<td style="text-align:center">LG4822</td>
+</tr>
+<tr>
+<td style="text-align:center">52</td>
+<td style="text-align:center">2019.08.30</td>
+<td style="text-align:center">[JSOI2010]缓存交换</td>
+<td style="text-align:center">60min</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">贪心地面对每一次缺失，选择pop掉第一次出现距离当前最远的点，用优先队列维护</td>
+<td style="text-align:center">贪心，堆</td>
+<td style="text-align:center">N/A</td>
+<td style="text-align:center">LG4404</td>
+</tr>
+<tr>
+<td style="text-align:center">53</td>
+<td style="text-align:center">2019.08.30</td>
+<td style="text-align:center">[APIO]动物园</td>
+<td style="text-align:center">90min</td>
+<td style="text-align:center">2，第一次初值赋小</td>
+<td style="text-align:center">状压dp，压每个小朋友看到的动物的状态，预处理出每一个状态下小朋友开心的个数，枚举最开始的小朋友的看到的动物的状态，再O(n)地向右扫</td>
+<td style="text-align:center">状压dp</td>
+<td style="text-align:center">链接</td>
+<td style="text-align:center">LG3622</td>
+</tr>
+<tr>
+<td style="text-align:center">54</td>
+<td style="text-align:center">2019.10.13</td>
+<td style="text-align:center">跑路</td>
+<td style="text-align:center">50min</td>
+<td style="text-align:center">2，第一次思路错误</td>
+<td style="text-align:center">爆枚中间点和k，建图bfs</td>
+<td style="text-align:center">图论，倍增，最短路</td>
+<td style="text-align:center">链接</td>
+<td style="text-align:center">LG1613</td>
+</tr>
+<tr>
+<td style="text-align:center">55</td>
+<td style="text-align:center">2019.10.13</td>
+<td style="text-align:center">CF1037D Valid BFS?</td>
+<td style="text-align:center">60min</td>
+<td style="text-align:center">3，前两次细节错误</td>
+<td style="text-align:center">按照所给顺序直接bfs，过程判断是否合法</td>
+<td style="text-align:center">图论，bfs</td>
+<td style="text-align:center">N/A</td>
+<td style="text-align:center">CF1037D</td>
+</tr>
+<tr>
+<td style="text-align:center">56</td>
+<td style="text-align:center">2019.10.13</td>
+<td style="text-align:center">[NOIP2013]货车运输</td>
+<td style="text-align:center">70min</td>
+<td style="text-align:center">3，第一次细节写错，第二次忽略了森林的情况</td>
+<td style="text-align:center">先找出最大生成树，再LCA在最大生成树上统计答案</td>
+<td style="text-align:center">图论，最小生成树，LCA</td>
+<td style="text-align:center">链接</td>
+<td style="text-align:center">LG1967</td>
+</tr>
+<tr>
+<td style="text-align:center">57</td>
+<td style="text-align:center">2019.10.14</td>
+<td style="text-align:center">[NOIP2018]赛道修建</td>
+<td style="text-align:center">120min</td>
+<td style="text-align:center">3，前两次TLE</td>
+<td style="text-align:center">二分，multiset维护每个点可连出的边来check</td>
+<td style="text-align:center">二分答案</td>
+<td style="text-align:center">链接</td>
+<td style="text-align:center">LG5021</td>
+</tr>
+<tr>
+<td style="text-align:center">58</td>
+<td style="text-align:center">2019.10.14</td>
+<td style="text-align:center">CF894E Ralph and Mushrooms</td>
+<td style="text-align:center">80min</td>
+<td style="text-align:center">2，第一次细节错误</td>
+<td style="text-align:center">缩点后找最长链</td>
+<td style="text-align:center">tongyufangc</td>
+<td style="text-align:center">链接</td>
+<td style="text-align:center">CF894E</td>
+</tr>
+<tr>
+<td style="text-align:center">59</td>
+<td style="text-align:center">2019.10.14</td>
+<td style="text-align:center">T103487 「AMPPZ2014」The Captain</td>
+<td style="text-align:center">60min</td>
+<td style="text-align:center">2，第一次数组开小</td>
+<td style="text-align:center">不管min，直接相邻两点建图，卡SPFA</td>
+<td style="text-align:center">图论，最短路</td>
+<td style="text-align:center">N/A</td>
+<td style="text-align:center">BZOJ4152</td>
+</tr>
+<tr>
+<td style="text-align:center">60</td>
+<td style="text-align:center">2019.10.14</td>
+<td style="text-align:center">CF1042F Leaf Sets</td>
+<td style="text-align:center">80min</td>
+<td style="text-align:center">7，细节</td>
+<td style="text-align:center">对于每一个节点找出其子树叶子分成几个集合，并返回最长边回溯。答案就是dfs(rt)+1</td>
+<td style="text-align:center">图论，dfs</td>
+<td style="text-align:center">链接</td>
+<td style="text-align:center">CF1042F</td>
+</tr>
+<tr>
+<td style="text-align:center">61</td>
+<td style="text-align:center">2019.10.14</td>
+<td style="text-align:center">CF241E Flights</td>
+<td style="text-align:center">80min</td>
+<td style="text-align:center">4，细节</td>
+<td style="text-align:center">查分约束</td>
+<td style="text-align:center">图论，差分约束</td>
+<td style="text-align:center">链接</td>
+<td style="text-align:center">CF241E</td>
+</tr>
+<tr>
+<td style="text-align:center">62</td>
+<td style="text-align:center">2019.10.15</td>
+<td style="text-align:center">CF858F Wizard's Tour</td>
+<td style="text-align:center">60min</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">随机构树，dfs将非树边直接加入统计答案</td>
+<td style="text-align:center">图论</td>
+<td style="text-align:center">讨论</td>
+<td style="text-align:center">CF858F</td>
+</tr>
+<tr>
+<td style="text-align:center">63</td>
+<td style="text-align:center">2019.10.15</td>
+<td style="text-align:center">赛车游戏</td>
+<td style="text-align:center">30min</td>
+<td style="text-align:center">2，第一次没有判图不连通情况</td>
+<td style="text-align:center">同flights</td>
+<td style="text-align:center">图论，查分约束</td>
+<td style="text-align:center">N/A</td>
+<td style="text-align:center">LG5590</td>
+</tr>
+<tr>
+<td style="text-align:center">64</td>
+<td style="text-align:center">2019.10.15</td>
+<td style="text-align:center">CF859E Desk Disorder</td>
+<td style="text-align:center">40min</td>
+<td style="text-align:center">2，第一次忘取模</td>
+<td style="text-align:center">找有与自环相连的联通块与有环无自环的联通块，再统计一下答案</td>
+<td style="text-align:center">图论，并查集</td>
+<td style="text-align:center">链接</td>
+<td style="text-align:center">CF859E</td>
+</tr>
+<tr>
+<td style="text-align:center">65</td>
+<td style="text-align:center">2019.10.16</td>
+<td style="text-align:center">CF1051F The Shortest Statement</td>
+<td style="text-align:center">80min</td>
+<td style="text-align:center">7，dist数组忘开两倍</td>
+<td style="text-align:center">随机构树，统计树上距离与经过任意一边的距离</td>
+<td style="text-align:center">图论，LCA</td>
+<td style="text-align:center">N/A</td>
+<td style="text-align:center">CF1051F</td>
+</tr>
+<tr>
+<td style="text-align:center">66</td>
+<td style="text-align:center">2019.10.16</td>
+<td style="text-align:center">[NOIP2017]逛公园</td>
+<td style="text-align:center">80min</td>
+<td style="text-align:center">3，前两次细节错误</td>
+<td style="text-align:center">记忆化搜索，dpv,k表示从v到n比最短路长k的路径方案数</td>
+<td style="text-align:center">图论，记忆化搜索</td>
+<td style="text-align:center">链接</td>
+<td style="text-align:center">LG3953</td>
+</tr>
+<tr>
+<td style="text-align:center">67</td>
+<td style="text-align:center">2019.10.16</td>
+<td style="text-align:center">[HNOI/AHOI2018]游戏</td>
+<td style="text-align:center">50min</td>
+<td style="text-align:center">3，第一次细节写错，第二次数组开小</td>
+<td style="text-align:center">N/A</td>
+<td style="text-align:center">暴力</td>
+<td style="text-align:center">链接</td>
+<td style="text-align:center">LG4436</td>
+</tr>
+<tr>
+<td style="text-align:center">68</td>
+<td style="text-align:center">2019.10.16</td>
+<td style="text-align:center">CF891C Envy</td>
+<td style="text-align:center">80min</td>
+<td style="text-align:center">2，第一次数组开小</td>
+<td style="text-align:center">根据性质，将构出的最小生成树的不同边权分开处理，对于每一个询问将其还原至加边之前状态，查看每一条边是否能够存在于生成树中</td>
+<td style="text-align:center">图论，最小生成树</td>
+<td style="text-align:center">链接</td>
+<td style="text-align:center">CF891C</td>
+</tr>
+<tr>
+<td style="text-align:center">69</td>
+<td style="text-align:center">2019.10.17</td>
+<td style="text-align:center">[NOIP2016]蚯蚓</td>
+<td style="text-align:center">50min</td>
+<td style="text-align:center">3，前两次细节错误</td>
+<td style="text-align:center">蚯蚓存在隐含的单调性，将蚯蚓分成三队，每次取出三队头最大的进行切割。对于增长的q，在最后加上即可，需要注意的是每条蚯蚓增长q的时间长度不同，只需要附带记录下这条蚯蚓被切割的时间即可</td>
+<td style="text-align:center">数据结构</td>
+<td style="text-align:center">链接</td>
+<td style="text-align:center">LG2827</td>
+</tr>
+<tr>
+<td style="text-align:center">70</td>
+<td style="text-align:center">2019.10.17</td>
+<td style="text-align:center">[NOI2001]食物链</td>
+<td style="text-align:center">30min</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">用三个并查集记录下天敌、猎物、自己</td>
+<td style="text-align:center">数据结构，并查集</td>
+<td style="text-align:center">N/A</td>
+<td style="text-align:center">LG2024</td>
+</tr>
+<tr>
+<td style="text-align:center">71</td>
+<td style="text-align:center">2019.10.17</td>
+<td style="text-align:center">[PA2014]Kuglarz</td>
+<td style="text-align:center">80min</td>
+<td style="text-align:center">6，完全图kruskalTLE，改prim后有细节问题</td>
+<td style="text-align:center">知道了a到b、b到c的奇偶性，就知道了a到c的奇偶性。要知道任意点的奇偶性就只需要联通即可，问题转化为最小生成树</td>
+<td style="text-align:center">数据机构，最小生成树，prim</td>
+<td style="text-align:center">链接</td>
+<td style="text-align:center">T103929</td>
+</tr>
+<tr>
+<td style="text-align:center">72</td>
+<td style="text-align:center">2019.10.16-17</td>
+<td style="text-align:center">CF911F Tree Destruction</td>
+<td style="text-align:center">120min</td>
+<td style="text-align:center">8，细节（有一个地方括号多包含了一条语句）</td>
+<td style="text-align:center">找出树的直径，所有节点到全图最远一定是直径的某一个端点。所有非直径上的点在到直径两端点距离中取最大值，直径上的点直接依次删除。</td>
+<td style="text-align:center">图论</td>
+<td style="text-align:center">讨论</td>
+<td style="text-align:center">CF911F</td>
+</tr>
+<tr>
+<td style="text-align:center">73</td>
+<td style="text-align:center">2019.10.17</td>
+<td style="text-align:center">GSS3 - Can you answer these queries III</td>
+<td style="text-align:center">80min</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">记录左端点往左最大字段和与右端点往右最大子段和。线段树维护，合并显然。</td>
+<td style="text-align:center">数据结构，线段树</td>
+<td style="text-align:center">链接</td>
+<td style="text-align:center">SP1716</td>
+</tr>
+<tr>
+<td style="text-align:center">74</td>
+<td style="text-align:center">2019.10.17</td>
+<td style="text-align:center">GSS1 - Can you answer these queries I</td>
+<td style="text-align:center">10min</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">SP1716弱化版本</td>
+<td style="text-align:center">数据结构，线段树</td>
+<td style="text-align:center">N/A</td>
+<td style="text-align:center">SP1043</td>
+</tr>
+<tr>
+<td style="text-align:center">75</td>
+<td style="text-align:center">2019.10.17</td>
+<td style="text-align:center">[POI2015]KIN</td>
+<td style="text-align:center">20min</td>
+<td style="text-align:center">3，数组开小和没有开long long</td>
+<td style="text-align:center">SP1716的应用。考虑重复的电影，第一次出现就需要把当前位置加上喜悦度，第二次出现需要把上一次出现转变为负的才能去除这部电影，第三次出现就需要把上上次出现的修改为0，如果上上次仍为负会影响到后面的答案统计。</td>
+<td style="text-align:center">数据结构，线段树</td>
+<td style="text-align:center">链接</td>
+<td style="text-align:center">LG3582</td>
+</tr>
+<tr>
+<td style="text-align:center">76</td>
+<td style="text-align:center">2019.10.17</td>
+<td style="text-align:center">[NOI2016]区间</td>
+<td style="text-align:center">60min</td>
+<td style="text-align:center">4，数组开小</td>
+<td style="text-align:center">考虑代价与区间个数无关只与最小区间与最大区间有关，不妨先排序然后类似尺取法向右拓展</td>
+<td style="text-align:center">数据结构，线段树</td>
+<td style="text-align:center">链接</td>
+<td style="text-align:center">LG1712</td>
+</tr>
+<tr>
+<td style="text-align:center">77</td>
+<td style="text-align:center">2019.10.17</td>
+<td style="text-align:center">[SDOI2015]寻宝游戏</td>
+<td style="text-align:center">80min</td>
+<td style="text-align:center">2，没开long long</td>
+<td style="text-align:center">极小联通子树</td>
+<td style="text-align:center">数据结构</td>
+<td style="text-align:center">链接</td>
+<td style="text-align:center">LG3320</td>
+</tr>
+<tr>
+<td style="text-align:center">78</td>
+<td style="text-align:center">2019.10.18</td>
+<td style="text-align:center">【模板】可持久化数组（可持久化线段树/平衡树）</td>
+<td style="text-align:center">60min</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">可持久化线段树</td>
+<td style="text-align:center">数据结构，线段树</td>
+<td style="text-align:center">模板</td>
+<td style="text-align:center">LG3919</td>
+</tr>
+<tr>
+<td style="text-align:center">79</td>
+<td style="text-align:center">2019.10.20</td>
+<td style="text-align:center">小奇的糖果</td>
+<td style="text-align:center">180min</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">树状数组维护</td>
+<td style="text-align:center">数据结构，树状数组</td>
+<td style="text-align:center">链接</td>
+<td style="text-align:center">BZOJ4548</td>
+</tr>
+<tr>
+<td style="text-align:center">80</td>
+<td style="text-align:center">2019.10.20</td>
+<td style="text-align:center">CF1142B Lynyrd Skynyrd</td>
+<td style="text-align:center">50min</td>
+<td style="text-align:center">3，前两次细节错误</td>
+<td style="text-align:center">循环移位的性质，倍增</td>
+<td style="text-align:center">数据结构，倍增</td>
+<td style="text-align:center">链接</td>
+<td style="text-align:center">CF1142B</td>
+</tr>
+<tr>
+<td style="text-align:center">81</td>
+<td style="text-align:center">2019.10.21</td>
+<td style="text-align:center">CF1004E Sonya and Ice Cream</td>
+<td style="text-align:center">60min</td>
+<td style="text-align:center">2，第一次ans没有初始化</td>
+<td style="text-align:center">利用set，维护以每一个节点为根的子树中距离其最远的，依次删点</td>
+<td style="text-align:center">数据结构，set</td>
+<td style="text-align:center">xgzc</td>
+<td style="text-align:center">CF1004E</td>
+</tr>
+<tr>
+<td style="text-align:center">82</td>
+<td style="text-align:center">2019.10.21</td>
+<td style="text-align:center">CF650E Clockwork Bomb</td>
+<td style="text-align:center">40min</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">对于没有的边，可以连至其父亲，并查集维护</td>
+<td style="text-align:center">数据结构，并查集</td>
+<td style="text-align:center">xgzc</td>
+<td style="text-align:center">CF650E</td>
+</tr>
+<tr>
+<td style="text-align:center">83</td>
+<td style="text-align:center">2019.10.21</td>
+<td style="text-align:center">CF10D LCIS</td>
+<td style="text-align:center">30min</td>
+<td style="text-align:center">3，第一次ans未初始化，第二次pos未初始化</td>
+<td style="text-align:center">写的O(n^3)的</td>
+<td style="text-align:center">动态规划</td>
+<td style="text-align:center">N/A</td>
+<td style="text-align:center">CF10D</td>
+</tr>
+<tr>
+<td style="text-align:center">84</td>
+<td style="text-align:center">2019.10.21</td>
+<td style="text-align:center">[HAOI2008]硬币购物</td>
+<td style="text-align:center">40min</td>
+<td style="text-align:center">2，没开long long</td>
+<td style="text-align:center">按完全背包初始化然后容斥</td>
+<td style="text-align:center">动态规划，容斥</td>
+<td style="text-align:center">链接</td>
+<td style="text-align:center">LG1450</td>
+</tr>
+<tr>
+<td style="text-align:center">85</td>
+<td style="text-align:center">2019.10.21</td>
+<td style="text-align:center">飞扬的小鸟</td>
+<td style="text-align:center">60min</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">将小鸟飞到任意位置当做背包来做，向上为完全背包，向下为01背包</td>
+<td style="text-align:center">动态规划</td>
+<td style="text-align:center">链接</td>
+<td style="text-align:center">LG1941</td>
+</tr>
+<tr>
+<td style="text-align:center">86</td>
+<td style="text-align:center">2019.10.22</td>
+<td style="text-align:center">CF5E Bindian Signalizing</td>
+<td style="text-align:center">60min</td>
+<td style="text-align:center">4，细节</td>
+<td style="text-align:center">转化为链后，维护左右第一个比当前大的再统计答案，有一些细节</td>
+<td style="text-align:center">动态规划</td>
+<td style="text-align:center">交流</td>
+<td style="text-align:center">CF5E</td>
+</tr>
+<tr>
+<td style="text-align:center">87</td>
+<td style="text-align:center">2019.10.22</td>
+<td style="text-align:center">换教室</td>
+<td style="text-align:center">2day</td>
+<td style="text-align:center">5，细节</td>
+<td style="text-align:center">状态设计，转移方程非常复杂</td>
+<td style="text-align:center">动态规划</td>
+<td style="text-align:center">链接</td>
+<td style="text-align:center">LG1850</td>
+</tr>
+<tr>
+<td style="text-align:center">88</td>
+<td style="text-align:center">2019.10.23</td>
+<td style="text-align:center">AT2292 Division into Two</td>
+<td style="text-align:center">2day</td>
+<td style="text-align:center">4，细节</td>
+<td style="text-align:center">用树状数组维护转移，注意清空的一些细节</td>
+<td style="text-align:center">动态规划，树状数组</td>
+<td style="text-align:center">链接</td>
+<td style="text-align:center">AT2292</td>
+</tr>
+<tr>
+<td style="text-align:center">89</td>
+<td style="text-align:center">2019.10.23</td>
+<td style="text-align:center">宝藏</td>
+<td style="text-align:center">120min</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">状压DP，一些细节写错可能导致WA。看了许多不同解法。</td>
+<td style="text-align:center">动态规划</td>
+<td style="text-align:center">More Than One</td>
+<td style="text-align:center">LG3959</td>
+</tr>
+<tr>
+<td style="text-align:center">90</td>
+<td style="text-align:center">2019.10.23</td>
+<td style="text-align:center">CF55D Beautiful numbers</td>
+<td style="text-align:center">60min学习数位dp+60min写代码+30min调试</td>
+<td style="text-align:center">3，第一次没开RE，第二次常数过大TLE</td>
+<td style="text-align:center">数位dp，fi,j,k表示剩下i位需要规划，这前i位模2520的余数是j，当前的前i位数的最小公倍数是k，满足这些条件的个数。转移枚举。</td>
+<td style="text-align:center">动态规划，数位dp</td>
+<td style="text-align:center">链接</td>
+<td style="text-align:center">CF55D</td>
+</tr>
+<tr>
+<td style="text-align:center">91</td>
+<td style="text-align:center">2019.10.23</td>
+<td style="text-align:center">[HNOI2008]玩具装箱TOY</td>
+<td style="text-align:center">80min学习斜率优化+50min写代码</td>
+<td style="text-align:center">2，第一次细节错误</td>
+<td style="text-align:center">斜率优化模板题</td>
+<td style="text-align:center">动态规划，斜率优化</td>
+<td style="text-align:center">链接</td>
+<td style="text-align:center">LG3195</td>
+</tr>
+<tr>
+<td style="text-align:center">92</td>
+<td style="text-align:center">2019.10.24</td>
+<td style="text-align:center">[HNOI2012]集合选数</td>
+<td style="text-align:center">90min</td>
+<td style="text-align:center">4，前三次数组开小</td>
+<td style="text-align:center">构造矩形，状压dp</td>
+<td style="text-align:center">动态规划，状态压缩</td>
+<td style="text-align:center">链接</td>
+<td style="text-align:center">LG3226</td>
+</tr>
+<tr>
+<td style="text-align:center">93</td>
+<td style="text-align:center">2019.10.24</td>
+<td style="text-align:center">[JSOI2011]柠檬</td>
+<td style="text-align:center">2day</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">斜率优化，维护上凸包</td>
+<td style="text-align:center">动态规划，斜率优化</td>
+<td style="text-align:center">链接</td>
+<td style="text-align:center">LG5504</td>
+</tr>
+<tr>
+<td style="text-align:center">94</td>
+<td style="text-align:center">2019.10.24</td>
+<td style="text-align:center">[AMPPZ2014]The Prices</td>
+<td style="text-align:center">50min</td>
+<td style="text-align:center">2，第一次细节错误</td>
+<td style="text-align:center">状压</td>
+<td style="text-align:center">动态规划，状态压缩</td>
+<td style="text-align:center">链接</td>
+<td style="text-align:center">BZOJ4145</td>
+</tr>
+<tr>
+<td style="text-align:center">95</td>
+<td style="text-align:center">2019.10.25</td>
+<td style="text-align:center">[TJOI2013]拯救小矮人</td>
+<td style="text-align:center">40min</td>
+<td style="text-align:center">2，第一次naive的思路是错的</td>
+<td style="text-align:center">优先逃离能力强的矮人，按照ai+bi排序后，做一个背包即可</td>
+<td style="text-align:center">贪心，背包</td>
+<td style="text-align:center">链接</td>
+<td style="text-align:center">LG4823</td>
+</tr>
+<tr>
+<td style="text-align:center">96</td>
+<td style="text-align:center">2019.10.25</td>
+<td style="text-align:center">[JSOI2007]建筑抢修</td>
+<td style="text-align:center">60min</td>
+<td style="text-align:center">2，第一次细节错误</td>
+<td style="text-align:center">与之前8.28日的考试题十分类似，不同的是这里的建筑权均为1，因此只需要将优先队列维护的价值改为需要花费的时间</td>
+<td style="text-align:center">贪心，堆</td>
+<td style="text-align:center">N/A</td>
+<td style="text-align:center">LG4053</td>
+</tr>
+<tr>
+<td style="text-align:center">97</td>
+<td style="text-align:center">2019.10.25</td>
+<td style="text-align:center">国王游戏</td>
+<td style="text-align:center">80min</td>
+<td style="text-align:center">2，80分</td>
+<td style="text-align:center">贪心的思路也有一些玄学的方法（冒泡排序？）证明。瓶颈在于高精度</td>
+<td style="text-align:center">贪心，高精</td>
+<td style="text-align:center">链接</td>
+<td style="text-align:center">LG1080</td>
+</tr>
+<tr>
+<td style="text-align:center">98</td>
+<td style="text-align:center">2019.10.25</td>
+<td style="text-align:center">CF161B Discounts</td>
+<td style="text-align:center">40min</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">一个思路普及组第一题难度的显然贪心</td>
+<td style="text-align:center">贪心</td>
+<td style="text-align:center">N/A</td>
+<td style="text-align:center">CF161B</td>
+</tr>
+<tr>
+<td style="text-align:center">99</td>
+<td style="text-align:center">2019.10.25</td>
+<td style="text-align:center">T105138 叠罗汉</td>
+<td style="text-align:center">40min</td>
+<td style="text-align:center">2，第一次细节错误（break）</td>
+<td style="text-align:center">按照ai+bi的大小排序，将小的放在上</td>
+<td style="text-align:center">贪心</td>
+<td style="text-align:center">xgzc</td>
+<td style="text-align:center">T105138</td>
+</tr>
+<tr>
+<td style="text-align:center">100</td>
+<td style="text-align:center">2019.10.25</td>
+<td style="text-align:center">CF286C Main Sequence</td>
+<td style="text-align:center">40min</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">括号配对问题，直接用栈维护，Tham的选题真奇怪</td>
+<td style="text-align:center">贪心，栈</td>
+<td style="text-align:center">N/A</td>
+<td style="text-align:center">CF286C</td>
+</tr>
+<tr>
+<td style="text-align:center">101</td>
+<td style="text-align:center">2019.10.25</td>
+<td style="text-align:center">标题统计</td>
+<td style="text-align:center">1min</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">字符串，注意细节</td>
+<td style="text-align:center">字符串</td>
+<td style="text-align:center">N/A</td>
+<td style="text-align:center">LG5015</td>
+</tr>
+<tr>
+<td style="text-align:center">102</td>
+<td style="text-align:center">2019.10.25</td>
+<td style="text-align:center">疫情控制</td>
+<td style="text-align:center">120min</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">对于每个军队，越向根节点走其能封锁的叶子节点更多。如果当前军队覆盖的节点已经有军队了，且其中还有一支军队可以穿过根节点，那么这支军队就贪心地去找与之匹配的子节点（从小的开始）。</td>
+<td style="text-align:center">贪心</td>
+<td style="text-align:center">交流</td>
+<td style="text-align:center">LG1084</td>
+</tr>
+<tr>
+<td style="text-align:center">103</td>
+<td style="text-align:center">2019.10.27</td>
+<td style="text-align:center">观光公交</td>
+<td style="text-align:center">120min</td>
+<td style="text-align:center">5，细节</td>
+<td style="text-align:center">nk的思路还是比较简洁，每次选影响最大的一段用氮气加速。复杂度nk，nlogn的没听longge讲明白</td>
+<td style="text-align:center">贪心</td>
+<td style="text-align:center">交流</td>
+<td style="text-align:center">LG1315</td>
+</tr>
+<tr>
+<td style="text-align:center">104</td>
+<td style="text-align:center">2019.10.28</td>
+<td style="text-align:center">[HNOI2015]菜肴制作</td>
+<td style="text-align:center">30min</td>
+<td style="text-align:center">2，没判无解</td>
+<td style="text-align:center">逆序拓扑序</td>
+<td style="text-align:center">贪心</td>
+<td style="text-align:center">交流</td>
+<td style="text-align:center">LG3243</td>
+</tr>
+<tr>
+<td style="text-align:center">105</td>
+<td style="text-align:center">2019.10.28</td>
+<td style="text-align:center">[NOI2015]荷马史诗</td>
+<td style="text-align:center">40min</td>
+<td style="text-align:center">2，没开long long</td>
+<td style="text-align:center">k叉哈弗曼树，合并果子每次取前k个最小的</td>
+<td style="text-align:center">贪心</td>
+<td style="text-align:center">交流</td>
+<td style="text-align:center">LG2168</td>
+</tr>
+<tr>
+<td style="text-align:center">106</td>
+<td style="text-align:center">2019.10.28</td>
+<td style="text-align:center">[HEOI2015]兔子与樱花</td>
+<td style="text-align:center">60min</td>
+<td style="text-align:center">2，第一次细节错误</td>
+<td style="text-align:center">考虑删除的贡献，从下向上删除</td>
+<td style="text-align:center">贪心</td>
+<td style="text-align:center">交流</td>
+<td style="text-align:center">LG4107</td>
+</tr>
+<tr>
+<td style="text-align:center">107</td>
+<td style="text-align:center">2019.10.28</td>
+<td style="text-align:center">靶形数独</td>
+<td style="text-align:center">50min</td>
+<td style="text-align:center">5，TLE</td>
+<td style="text-align:center">优化加入的顺序，减少dfs的深度</td>
+<td style="text-align:center">搜索，顺序优化</td>
+<td style="text-align:center">xgzc</td>
+<td style="text-align:center">LG1074</td>
+</tr>
+<tr>
+<td style="text-align:center">108</td>
+<td style="text-align:center">2019.10.28</td>
+<td style="text-align:center">引水入城</td>
+<td style="text-align:center">60min</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">思路还是比较简单，没有想到的是对于一个蓄水池对应的一定是一段连续的区间，否则断开的部分一定会无法到达</td>
+<td style="text-align:center">搜索</td>
+<td style="text-align:center">N/A</td>
+<td style="text-align:center">LG1514</td>
+</tr>
+<tr>
+<td style="text-align:center">109</td>
+<td style="text-align:center">2019.10.28</td>
+<td style="text-align:center">Mayan游戏</td>
+<td style="text-align:center">150min</td>
+<td style="text-align:center">2，第一次没有判无解</td>
+<td style="text-align:center">细节有一点多（非常）</td>
+<td style="text-align:center">搜索，模拟</td>
+<td style="text-align:center">yyb</td>
+<td style="text-align:center">LG1312</td>
+</tr>
+<tr>
+<td style="text-align:center">110</td>
+<td style="text-align:center">2019.10.29</td>
+<td style="text-align:center">[SCOI2010]幸运数字</td>
+<td style="text-align:center">100min</td>
+<td style="text-align:center">3，前两次不够优秀TLE</td>
+<td style="text-align:center">先搜出无倍数关系的943个，再容斥</td>
+<td style="text-align:center">搜索，容斥</td>
+<td style="text-align:center">交流</td>
+<td style="text-align:center">LG2567</td>
+</tr>
+<tr>
+<td style="text-align:center">111</td>
+<td style="text-align:center">2019.10.30</td>
+<td style="text-align:center">[JLOI2014]聪明的燕姿</td>
+<td style="text-align:center">150min</td>
+<td style="text-align:center">9，一个地方数组越界本地没有问题洛谷评测机WA</td>
+<td style="text-align:center">利用分解式，枚举每一个pi的ai暴搜，有一些剪枝优化</td>
+<td style="text-align:center">搜索，数学</td>
+<td style="text-align:center">交流</td>
+<td style="text-align:center">LG4397</td>
+</tr>
+<tr>
+<td style="text-align:center">112</td>
+<td style="text-align:center">2019.10.31</td>
+<td style="text-align:center">水壶</td>
+<td style="text-align:center">2day</td>
+<td style="text-align:center">6，RE</td>
+<td style="text-align:center">类似于Petrol</td>
+<td style="text-align:center">搜索，LCA</td>
+<td style="text-align:center">交流+M_sea</td>
+<td style="text-align:center">BZOJ4242</td>
+</tr>
+<tr>
+<td style="text-align:center">113</td>
+<td style="text-align:center">2019.10.31</td>
+<td style="text-align:center">斗地主</td>
+<td style="text-align:center">2day</td>
+<td style="text-align:center">5，细节+思路性错误</td>
+<td style="text-align:center">将打散牌的贪心改为dp，即可做到拆牌</td>
+<td style="text-align:center">搜索，dp</td>
+<td style="text-align:center">交流+ztl</td>
+<td style="text-align:center">LG2688</td>
+</tr>
+<tr>
+<td style="text-align:center">114</td>
+<td style="text-align:center">2019.10.31</td>
+<td style="text-align:center">解方程</td>
+<td style="text-align:center">30min</td>
+<td style="text-align:center">2，第一次没在读入时取模</td>
+<td style="text-align:center">带值，随便取一个模数，如果等于0即可能为一个解，取的模数越大越好（192***17可过）</td>
+<td style="text-align:center">数学，玄学</td>
+<td style="text-align:center">Luogu</td>
+<td style="text-align:center">LG2312</td>
+</tr>
+<tr>
+<td style="text-align:center">115</td>
+<td style="text-align:center">2019.10.31</td>
+<td style="text-align:center">愤怒的小鸟</td>
+<td style="text-align:center">50min</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">状压，枚举子集+计算</td>
+<td style="text-align:center">数学，动态规划，状态压缩</td>
+<td style="text-align:center">N/A</td>
+<td style="text-align:center">LG2831</td>
+</tr>
+<tr>
+<td style="text-align:center">116</td>
+<td style="text-align:center">2019.11.31</td>
+<td style="text-align:center">奶牛接力</td>
+<td style="text-align:center">50min</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">直接上矩阵快速幂</td>
+<td style="text-align:center">数学，图论</td>
+<td style="text-align:center">N/A</td>
+<td style="text-align:center">LG2886</td>
+</tr>
+<tr>
+<td style="text-align:center">117</td>
+<td style="text-align:center">2019.11.2</td>
+<td style="text-align:center">[APIO2019]奇怪装置</td>
+<td style="text-align:center">60min</td>
+<td style="text-align:center">3，前两次细节错误</td>
+<td style="text-align:center">随便用种方法推下相等的情况，发现循环节非常小，直接找循环节做一个区间覆盖，记得分类讨论</td>
+<td style="text-align:center">数学</td>
+<td style="text-align:center">链接</td>
+<td style="text-align:center">LG5444</td>
+</tr>
+<tr>
+<td style="text-align:center">118</td>
+<td style="text-align:center">2019.11.3</td>
+<td style="text-align:center">[JXOI2018]游戏</td>
+<td style="text-align:center">60min</td>
+<td style="text-align:center">2，第一次常数过大TLE</td>
+<td style="text-align:center">推出式子即可</td>
+<td style="text-align:center">数学，组合</td>
+<td style="text-align:center">M_sea</td>
+<td style="text-align:center">LG4652</td>
+</tr>
+<tr>
+<td style="text-align:center">119</td>
+<td style="text-align:center">2019.11.6</td>
+<td style="text-align:center">运输计划</td>
+<td style="text-align:center">2day</td>
+<td style="text-align:center">5，前两次细节写错，后三次卡常通过</td>
+<td style="text-align:center">二分一个mid，暴力树上差分将所有计长度大于mid的路径上的所有的边加一，找出被所有这些边覆盖的最长的边，然后直接与最长的链相减判断是否小于mid，注意常数因子的优化</td>
+<td style="text-align:center">图论，LCA</td>
+<td style="text-align:center">N/A</td>
+<td style="text-align:center">LG2680</td>
+</tr>
+<tr>
+<td style="text-align:center">120</td>
+<td style="text-align:center">2019.11.7</td>
+<td style="text-align:center">[HEOI2014]平衡</td>
+<td style="text-align:center">30min</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">整数划分问题，dp解决</td>
+<td style="text-align:center">动态规划</td>
+<td style="text-align:center">longge讲题</td>
+<td style="text-align:center">LG4104</td>
+</tr>
+<tr>
+<td style="text-align:center">121</td>
+<td style="text-align:center">2019.11.8</td>
+<td style="text-align:center">【模板】网络最大流</td>
+<td style="text-align:center">70min</td>
+<td style="text-align:center">2，第一次前向星忘开两倍边集</td>
+<td style="text-align:center">模板</td>
+<td style="text-align:center">最大流</td>
+<td style="text-align:center">N/A</td>
+<td style="text-align:center">LG3376</td>
+</tr>
+<tr>
+<td style="text-align:center">122</td>
+<td style="text-align:center">2019.11.8</td>
+<td style="text-align:center">地震逃生</td>
+<td style="text-align:center">10min</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">板子题</td>
+<td style="text-align:center">最大流</td>
+<td style="text-align:center">N/A</td>
+<td style="text-align:center">LG1343</td>
+</tr>
+<tr>
+<td style="text-align:center">123</td>
+<td style="text-align:center">2019.11.8</td>
+<td style="text-align:center">酒店之王</td>
+<td style="text-align:center">60min</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">板子题，建图时注意修改点数</td>
+<td style="text-align:center">最大流</td>
+<td style="text-align:center">N/A</td>
+<td style="text-align:center">LG1402</td>
+</tr>
+<tr>
+<td style="text-align:center">124</td>
+<td style="text-align:center">2019.11.8</td>
+<td style="text-align:center">教辅的组成</td>
+<td style="text-align:center">10min</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">板子题</td>
+<td style="text-align:center">最大流</td>
+<td style="text-align:center">N/A</td>
+<td style="text-align:center">LG1231</td>
+</tr>
+<tr>
+<td style="text-align:center">125</td>
+<td style="text-align:center">2019.11.10</td>
+<td style="text-align:center">【模板】最小费用最大流</td>
+<td style="text-align:center">60min</td>
+<td style="text-align:center">4，前三次INF抱long long</td>
+<td style="text-align:center">模板，SPFA实现，Dij待补</td>
+<td style="text-align:center">费用流</td>
+<td style="text-align:center">N/A</td>
+<td style="text-align:center">LG3381</td>
+</tr>
+<tr>
+<td style="text-align:center">126</td>
+<td style="text-align:center">2019.11.10</td>
+<td style="text-align:center">【模板】矩阵快速幂</td>
+<td style="text-align:center">30min</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">模板，注意矩阵大小</td>
+<td style="text-align:center">矩阵快速幂</td>
+<td style="text-align:center">N/A</td>
+<td style="text-align:center">LG3390</td>
+</tr>
+<tr>
+<td style="text-align:center">127</td>
+<td style="text-align:center">2019.11.10</td>
+<td style="text-align:center">MOJ100000 胖</td>
+<td style="text-align:center">30min</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">推式子直接上矩阵快速幂</td>
+<td style="text-align:center">矩阵快速幂</td>
+<td style="text-align:center">longge讲题</td>
+<td style="text-align:center">MOJ100000</td>
+</tr>
+</tbody>
+</table>
+
+    </body>
+    </html>
