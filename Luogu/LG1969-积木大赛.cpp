@@ -5,7 +5,7 @@
 #include<algorithm>
 
 using namespace std;
-
+#define int ll
 #define REP(i,e,s) for(register int i=(e); i<=(s); i++)
 #define DREP(i,e,s) for(register int i=(e); i>=(s); i--)
 #define ll long long
@@ -57,22 +57,22 @@ struct SegmentTree {
 } s;
 
 int ans;
-void calc(int l,int r) {
-	if(l<r) return ;
+void calc(int l,int r,int dept) {
+	if(l>r) return ;
 	pair<int,int> x=s.ask(1,l,r);
-	if(x.first>=0) return;
-	ans++;
 	int pos=s.ask(1,l,r).second;
-	calc(l,pos);
-	calc(pos+1,r);
+	ans+=a[pos]-dept;
+
+	calc(l,pos-1,a[pos]);
+	calc(pos+1,r,a[pos]);
 }
 
-int main() {
+signed main() {
 	int n=read();
-	REP(i,1,n) a[i]=-read();
+	REP(i,1,n) a[i]=read();
 	s.build(1,1,n);
-	calc(1,n);	
-	printf("%d\n",ans);
+	calc(1,n,0);	
+	printf("%lld\n",ans);
 	return 0;
 }
 
