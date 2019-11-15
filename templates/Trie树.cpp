@@ -36,7 +36,7 @@ void insert(char *w) {
 		cnt[p]++;
  	}
 }
- 
+
 int search(char *s) {
 	int len=strlen(s);
 	int p=0;

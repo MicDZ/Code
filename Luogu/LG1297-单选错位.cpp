@@ -19,29 +19,25 @@ int read() {
 	return x*f;
 }
 
-const int MAXN=1000000+10;
+const int MAXN=1e7+10;
 
-char a[MAXN],b[MAXN];
+int a[MAXN],n,A,B,C;
 
-int kmp[MAXN],f[MAXN];
+void geta() {
+	scanf("%d%d%d%d%d",&n,&A,&B,&C,a+1);
+	for (int i=2;i<=n;i++)
+	a[i] = ((long long)a[i-1] * A + B) % 100000001;
+	for (int i=1;i<=n;i++)
+	a[i] = a[i] % C + 1;
+}
 
 int main() {
-	scanf("%s%s",a+1,b+1);
-	int lena=strlen(a+1),lenb=strlen(b+1);
-	kmp[1]=0;int j=0;
-	REP(i,2,lenb) {
-		while(j&&b[i]!=b[j+1]) j=kmp[j];
-		if(b[i]==b[j+1]) j++;
-		kmp[i]=j;
-	}
-	j=0;
-	REP(i,1,lena) {
-		while(j&&a[i]!=b[j+1]) j=kmp[j];
-		if(a[i]==b[j+1]) j++;
-		f[i]=j;
-		if(f[i]==lenb) printf("%d\n",i-lenb+1);
-	}
-	REP(i,1,lena) printf("%d ",kmp[i]);
+	geta();
+	double ans;
+
+	REP(i,2,n) ans+=min(a[i],a[i-1])*1./(a[i]*a[i-1]);
+	ans+=min(a[1],a[n])*1./(a[1]*a[n]);
+	printf("%.3lf\n",ans);
 	return 0;
 }
 

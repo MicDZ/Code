@@ -59,10 +59,12 @@ struct SegmentTree {
 int ans;
 void calc(int l,int r,int dept) {
 	if(l>r) return ;
-	pair<int,int> x=s.ask(1,l,r);
-	int pos=s.ask(1,l,r).second;
+	//pair<int,int> x=s.ask(1,l,r);
+	//int pos=s.ask(1,l,r).second;
+	int pos=l;
+	REP(i,l,r) if(a[pos]>a[i]) pos=i;
+	
 	ans+=a[pos]-dept;
-
 	calc(l,pos-1,a[pos]);
 	calc(pos+1,r,a[pos]);
 }

@@ -2,7 +2,7 @@
 #include<cstdio>
 #include<cmath>
 #include<cstring>
-using namespace std;
+using namespace std
 
 #define REP(i,e,s) for(register int i=e; i<=s; i++)
 #define DREP(i,e,s) for(register int i=e; i>=s; i--)

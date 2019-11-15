@@ -19,29 +19,33 @@ int read() {
 	return x*f;
 }
 
-const int MAXN=1000000+10;
+const int MAXN=1000000+10,MOD=1e9+7;
+ll a[MAXN];
+ll sum[MAXN],suf[MAXN];
 
-char a[MAXN],b[MAXN];
-
-int kmp[MAXN],f[MAXN];
+ll qpow(ll a,ll b) {
+	ll ans=1;
+	while(b) {
+		if(b&1) ans=ans*a%MOD;
+		b>>=1;
+		a=a*a%MOD;
+	}
+	return ans;
+}
 
 int main() {
-	scanf("%s%s",a+1,b+1);
-	int lena=strlen(a+1),lenb=strlen(b+1);
-	kmp[1]=0;int j=0;
-	REP(i,2,lenb) {
-		while(j&&b[i]!=b[j+1]) j=kmp[j];
-		if(b[i]==b[j+1]) j++;
-		kmp[i]=j;
+	int n=read();
+	REP(i,1,n) a[i]=read()%MOD;
+	sort(a+1,a+1+n);
+	REP(i,1,n) sum[i]=(sum[i-1]+a[i])%MOD;
+	DREP(i,n,1) suf[i]=(suf[i+1]+a[i])%MOD;
+	
+	ll ans=0;
+	REP(i,2,n) {
+		ans=(ans+qpow(2,i-2)*(suf[n-i+2]-sum[i-1]+MOD))%MOD;
 	}
-	j=0;
-	REP(i,1,lena) {
-		while(j&&a[i]!=b[j+1]) j=kmp[j];
-		if(a[i]==b[j+1]) j++;
-		f[i]=j;
-		if(f[i]==lenb) printf("%d\n",i-lenb+1);
-	}
-	REP(i,1,lena) printf("%d ",kmp[i]);
+
+	printf("%lld\n",ans);
 	return 0;
 }
 

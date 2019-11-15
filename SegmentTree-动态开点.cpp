@@ -18,70 +18,69 @@ int read() {
 	while(ch>='0'&&ch<='9'){x=x*10+ch-'0';ch=getchar();}
 	return x*f;
 }
+#define int ll
+const int MAXN=100000+10;
 
-const ll MAXN=100000+10,MOD=0x3f3f3f3f3f3f3f3f;
 struct SegmentTree {
-	int lf[MAXN<<2],rg[MAXN<<2];
-	ll sum[MAXN<<2],add[MAXN<<2],a[MAXN];
+	int lson[MAXN<<2],rson[MAXN<<2],a[MAXN];
+	int lf[MAXN<<2],rg[MAXN<<2],sum[MAXN<<2],add[MAXN<<2],cnt;
 #define l(x) lf[x]
 #define r(x) rg[x]
 #define sum(x) sum[x]
 #define add(x) add[x]
 #define len(x) (rg[x]-lf[x]+1)
 	void pushup(int p) {
-		sum(p)=(sum(p*2)+sum(p*2+1))%MOD;
+		sum(p)=sum(lson[p])+sum(rson[p]);
 	}
 	void pushdown(int p) {
 		if(add(p)) {
-			add(p*2)=(add(p)+add(p*2))%MOD;
-			add(p*2+1)=(add(p)+add(p*2+1))%MOD;
-			sum(p*2)=(add(p)*1ll*len(p*2)+sum(p*2))%MOD;
-			sum(p*2+1)=(add(p)*1ll*len(p*2+1)+sum(p*2+1))%MOD;
+			if(!lson[p]) lson[p]=++cnt;
+			if(!rson[p]) rson[p]=++cnt;
+			int mid=(l(p)+r(p))>>1;
+			add(lson[p])=add(lson[p])+add(p);
+			add(rson[p])=add(rson[p])+add(p);
+			sum(lson[p])=sum(lson[p])+add(p)*(mid-l(p)+1);
+			sum(rson[p])=sum(rson[p])+add(p)*(r(p)-mid);
 			add(p)=0;
 		}
 	}
-	void build(int p,int l,int r) {
-		l(p)=l,r(p)=r;
-		if(l==r) {sum(p)=a[l];return ;}
-		int mid=(l+r)>>1;
-		build(p*2,l,mid);
-		build(p*2+1,mid+1,r);
-		pushup(p);
-	}
-	void change(int p,int l,int r,ll d) {
-		if(l(p)>=l&&r(p)<=r) {
-			sum(p)=(sum(p)+1ll*d*len(p))%MOD;
-			add(p)=(add(p)+d)%MOD;
+	void change(int &p,int l,int r,int L,int R,int d) {
+		if(!p) p=++cnt,l(p)=l,r(p)=r;
+		if(l(p)>=L&&r(p)<=R) {
+			sum(p)=sum(p)+d*len(p);
+			add(p)=add(p)+d;
 			return ;
 		}
 		pushdown(p);
 		int mid=(l(p)+r(p))>>1;
-		if(l<=mid) change(p*2,l,r,d);
-		if(r>mid) change(p*2+1,l,r,d);	
+		if(L<=mid) change(lson[p],l,mid,L,R,d);
+		if(R>mid) change(rson[p],mid+1,r,L,R,d);
 		pushup(p);
 	}
-	ll ask(int p,int l,int r) {
-		if(l(p)>=l&&r(p)<=r) {return sum(p);}
-		ll ans=0;
+	int ask(int p,int l,int r) {
+		if(!p) return 0;
+		if(l(p)>=l&&r(p)<=r) return sum(p);
 		pushdown(p);
 		int mid=(l(p)+r(p))>>1;
-		if(l<=mid) ans=(ans+ask(p*2,l,r))%MOD;
-		if(r>mid) ans=(ans+ask(p*2+1,l,r))%MOD;
+		int ans=0;
+		if(l<=mid) ans=ans+ask(lson[p],l,r);
+		if(r>mid) ans=ans+ask(rson[p],l,r);
 		return ans;
 	}
 } s;
 
-int main() {
-	file("data");
-	int n=read(),m=read();
-	REP(i,1,n) s.a[i]=read();
-	s.build(1,1,n);
+signed main() {
+	int n=read(),m=read(),rt=0;
+	REP(i,1,n) {
+		int x=read();
+		s.change(rt,1,n,i,i,x);
+	}
+	
 	REP(i,1,m) {
 		int op=read();
 		if(op==1) {
-			int x=read(),y=read();
-			ll k=read();
-			s.change(1,x,y,k);
+			int x=read(),y=read(),k=read();
+			s.change(rt,1,n,x,y,k);
 		}
 		if(op==2) {
 			int x=read(),y=read();
