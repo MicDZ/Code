@@ -19,22 +19,23 @@ int read() {
 	return x*f;
 }
 
-const int MAXN=10000+10;
+const int MAXN=40000+10;
 
-int n,m,c,gap,pos[MAXN],a[MAXN];
+int n,m,gap,a[MAXN],pos[MAXN];
 
 int ask(int l,int r) {
 	
 }
 
 int main() {
-	n=read(),c=read(),m=read(),gap=sqrt(1.0*n*log(n)/log(2));
-	REP(i,1,n) a[i]=read(),pos[i]=(i-1)/gap+1;
+	n=read(),m=read(),gap=sqrt(n);
+	REP(i,1,n) a[i]=read();
+	REP(i,1,n) pos[i]=(i-1)/gap+1;
 	int last=0;
 	REP(i,1,m) {
-		int l=(read()+last)%n+1,r=(read()+last)%n+1;
+		int l=(read()+last-1)%n+1,r=(read()+last-1)%n+1;
+		if(l>r) swap(l,r);
 		last=ask(l,r);
-		printf("%d\n",last);
 	}
 	return 0;
 }

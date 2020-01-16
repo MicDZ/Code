@@ -3,6 +3,7 @@
 #include<cmath>
 #include<cstring>
 #include<algorithm>
+#include<stack>
 
 using namespace std;
 
@@ -19,7 +20,7 @@ int read() {
 	return x*f;
 }
 
-const int MAXN=100+10;
+const int MAXN=1000+10;
 
 int head[MAXN],_next[MAXN<<1],to[MAXN<<1],cnt;
 
@@ -34,15 +35,24 @@ int n,B;
 
 int fa[MAXN];
 
+stack<int> s;
+
+int tot,rt[MAXN],bel[MAXN];
 void dfs(int u) {
+	int cnr=s.size();
 	for(int i=head[u]; i; i=_next[i]) {
 		int v=to[i];
 		if(fa[u]==v) continue;
 		fa[v]=u;
 		dfs(v);
-		if()
+		if((int)s.size()>=B+cnr) {
+			rt[++tot]=u;
+			while((int)s.size()>cnr) bel[s.top()]=tot,s.pop();
+		}
 	}
+	s.push(u);
 }
+
 
 int main() {
 	n=read(),B=read();
@@ -51,7 +61,13 @@ int main() {
 		addedge(u,v);
 		addedge(v,u);
 	}
-
+	dfs(1);
+	if(!tot) rt[++tot]=1;
+	while(s.size()) bel[s.top()]=tot,s.pop();
+	
+	printf("%d\n",tot);
+	REP(i,1,n) printf("%d ",bel[i]);puts("");
+	REP(i,1,tot) printf("%d ",rt[i]);
 	return 0;
 }
 
