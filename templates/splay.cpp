@@ -20,9 +20,9 @@ int read() {
 }
 const int MAXN=100000+10;
 struct Splay {
-	
+
 	int rt,tot,val[MAXN],ch[MAXN][2],fa[MAXN],cnt[MAXN],size[MAXN];
-	
+
 	Splay() {
 		rt=0,tot=0;
 		memset(val,0,sizeof(val));
