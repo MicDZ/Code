@@ -55,7 +55,7 @@ signed main() {
 		
 		DREP(i,p-1-1,0) inv[i]=inv[i+1]*(i+1)%p;
 			
-		printf("%lld\n",lucas(n+m,m));
+		printf("%lld\n",C(n+m,m));
 	}
 	return 0;
 }
